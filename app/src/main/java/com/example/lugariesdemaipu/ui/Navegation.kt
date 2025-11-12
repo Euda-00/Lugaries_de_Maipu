@@ -1,9 +1,12 @@
 package com.example.lugariesdemaipu.ui
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.example.lugariesdemaipu.ui.screens.home.CategoryListScreen
 import com.example.lugariesdemaipu.ui.screens.home.HomeScreen
 
 @Composable
@@ -24,7 +27,19 @@ fun AppNavigation() {
 
         // --- MÁS ADELANTE AGREGAREMOS LAS OTRAS PANTALLAS ---
 
-        // composable(route = "locales/{categoria}") { ... }
+        composable(
+            route = "locales/{categoria}",
+            arguments = listOf(
+                navArgument("categoria") { type = NavType.StringType }
+            )
+        ) { backStackEntry ->
+            val categoria = backStackEntry.arguments?.getString("categoria").orEmpty()
+            CategoryListScreen(
+                navController = navController,
+                categoryName = categoria
+            )
+        }
         // composable(route = "detalle/{lugarId}") { ... }
     }
+
 }

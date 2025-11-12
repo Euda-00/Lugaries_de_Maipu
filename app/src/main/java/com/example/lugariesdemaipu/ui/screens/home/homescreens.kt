@@ -16,29 +16,25 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lugariesdemaipu.R
 import com.example.lugariesdemaipu.data.DatosMaipu
 import com.example.lugariesdemaipu.ui.components.CategoriaCard
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.lugariesdemaipu.ui.screens.home.HomeViewModel
 import com.example.lugariesdemaipu.ui.components.LugarItem
+import com.example.lugariesdemaipu.ui.screens.home.HomeViewModel
 
 @Composable
 fun HomeScreen(
     navController: NavController,
-    // --- ARREGLO 1: Inyectar el ViewModel ---
     viewModel: HomeViewModel = viewModel()
 ) {
-    // --- ARREGLO 2: Obtener la lista desde el ViewModel ---
     val localesDestacados = viewModel.localesDestacados
 
-    // Usamos LazyColumn para que toda la pantalla tenga scroll
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
-        // --- 1. Nombre del Proyecto ---
+        // Título
         item {
             Text(
                 text = "LOS LUGARES DE MAIPÚ",
@@ -50,7 +46,7 @@ fun HomeScreen(
             )
         }
 
-        // --- 2. Imagen (Templo) ---
+        // Imagen grande
         item {
             Image(
                 painter = painterResource(id = R.drawable.templo_maipu),
@@ -59,11 +55,12 @@ fun HomeScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(400.dp)
-                    .padding(horizontal = 16.dp) // Padding solo a los lados
+                    .padding(horizontal = 16.dp)
                     .clip(RoundedCornerShape(16.dp))
             )
         }
 
+        // Título categorías
         item {
             Text(
                 text = "Categorías",
@@ -74,22 +71,20 @@ fun HomeScreen(
             )
         }
 
-        // --- 3. ¡AQUÍ VA LA FILA HORIZONTAL DE CATEGORÍAS! ---
+        // Carrusel de categorías
         item {
-
             Spacer(modifier = Modifier.padding(8.dp))
             LazyRow(
                 modifier = Modifier.fillMaxWidth(),
                 contentPadding = PaddingValues(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-
                 items(DatosMaipu.listaCategorias) { categoria ->
-                    // se usa el mismo CategoriaCard
                     CategoriaCard(
                         nombre = categoria.nombre,
                         icono = categoria.icono,
                         onClick = {
+                            // 👉 Navega a la pantalla de lista por categoría
                             navController.navigate("locales/${categoria.nombre}")
                         }
                     )
@@ -97,7 +92,7 @@ fun HomeScreen(
             }
         }
 
-        // --- 4. ¡AQUÍ VA LOS LOCALES DESTACADOS! ---
+        // Título destacados
         item {
             Text(
                 text = "Destacados de la Comuna",
@@ -108,18 +103,15 @@ fun HomeScreen(
             )
         }
 
+        // Lista de destacados
         items(localesDestacados) { lugar ->
             LugarItem(
                 lugar = lugar,
-                onItemClick = {
-                    navController.navigate("detalle/${lugar.id}")
-                },
-                    modifier = Modifier.padding(5.dp)
+                onItemClick = { navController.navigate("detalle/${lugar.id}") },
+                modifier = Modifier.padding(5.dp)
             )
         }
 
-        item {
-            Spacer(modifier = Modifier.height(12.dp))
-        }
+        item { Spacer(modifier = Modifier.height(12.dp)) }
     }
 }
