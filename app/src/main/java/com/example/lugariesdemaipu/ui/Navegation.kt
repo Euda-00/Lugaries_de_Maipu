@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.lugariesdemaipu.ui.screens.detail.DetailScreen
 import com.example.lugariesdemaipu.ui.screens.home.CategoryListScreen
 import com.example.lugariesdemaipu.ui.screens.home.HomeScreen
 
@@ -39,7 +40,14 @@ fun AppNavigation() {
                 categoryName = categoria
             )
         }
-        // composable(route = "detalle/{lugarId}") { ... }
+        composable(
+            route = "detail/{lugarId}",
+            arguments = listOf(navArgument("lugarId") { type = NavType.IntType })
+        ) { backStackEntry ->
+            val lugarId = backStackEntry.arguments?.getInt("lugarId")
+            requireNotNull(lugarId) { "lugarId parameter wasn't found. Please make sure it's set!" }
+            DetailScreen(lugarId = lugarId)
+        }
     }
 
 }

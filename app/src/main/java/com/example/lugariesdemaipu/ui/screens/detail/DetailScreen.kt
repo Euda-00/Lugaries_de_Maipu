@@ -5,9 +5,9 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -18,13 +18,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.lugariesdemaipu.ui.screens.detail.DetailViewModel
-import com.example.lugariesdemaipu.Lugar
+import com.example.lugariesdemaipu.data.DatosMaipu
+import com.example.lugariesdemaipu.data.model.Lugar
 import com.example.lugariesdemaipu.R
 
 @Composable
 fun DetailScreen(viewModel: DetailViewModel = viewModel(), lugarId: Int) {
-    viewModel.getLugar(lugarId)
+    viewModel.getLugar(lugarId.toString())
     val uiState by viewModel.uiState.collectAsState()
 
     DetailContent(lugar = uiState.lugar)
@@ -33,10 +33,10 @@ fun DetailScreen(viewModel: DetailViewModel = viewModel(), lugarId: Int) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailContent(lugar: Lugar?) {
-    lugar?.let { 
+    lugar?.let {
         Column(modifier = Modifier.fillMaxSize()) {
             Image(
-                painter = painterResource(id = R.drawable.placeholder_image),
+                painter = painterResource(id = it.imagen),
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -66,26 +66,25 @@ fun DetailContent(lugar: Lugar?) {
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(64.dp))
 
-                Text(text = "About", style = MaterialTheme.typography.headlineSmall)
+                Text(text = "Descripción", style = MaterialTheme.typography.headlineSmall)
                 Text(text = it.descripcion, style = MaterialTheme.typography.bodyMedium)
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(128.dp))
 
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceAround) {
                     Button(onClick = { /*TODO*/ }) {
-                        Text(text = "Call")
+                        Text(text = "Llamar")
                     }
                     Button(onClick = { /*TODO*/ }) {
-                        Text(text = "Website")
+                        Text(text = "Pagina")
                     }
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                Text(text = "Gallery", style = MaterialTheme.typography.headlineSmall)
-                // Aquí puedes agregar una galería de imágenes
+
             }
         }
     }
@@ -94,15 +93,6 @@ fun DetailContent(lugar: Lugar?) {
 @Preview(showBackground = true)
 @Composable
 fun DetailScreenPreview() {
-    val dummyLugar = Lugar(
-        id = 1,
-        nombre = "Bodega Tempus Alba",
-        categoria = "Winery",
-        subcategoria = "",
-        horario = "Open now, Closes 5:00 PM",
-        direccion = "Perito Moreno 572, M5543 Maipú, Mendoza",
-        descripcion = "A family winery with a long tradition in Maipú. Tempus Alba is known for its high-quality Malbec and Cabernet Sauvignon. Visitors can enjoy guided tours, wine tastings, and a restaurant with stunning views of the Andes. The modern architecture blends seamlessly with the surrounding vineyards, offering a unique and memorable experience.",
-        imagen = ""
-    )
+    val dummyLugar = DatosMaipu.listaDeLugares.first()
     DetailContent(lugar = dummyLugar)
 }
