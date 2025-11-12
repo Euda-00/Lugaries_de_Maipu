@@ -102,7 +102,7 @@ fun CategoryListScreen(
                 // Usa tu componente existente
                 com.example.lugariesdemaipu.ui.components.LugarItem(
                     lugar = lugar,
-                    onItemClick = { navController.navigate("detalle/${lugar.id}") },
+                    onItemClick = { navController.navigate("detail/${lugar.id.toString()}") },
                     modifier = Modifier.fillMaxWidth()
                 )
             }

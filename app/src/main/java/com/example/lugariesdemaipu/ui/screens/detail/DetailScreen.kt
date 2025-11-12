@@ -23,8 +23,8 @@ import com.example.lugariesdemaipu.data.model.Lugar
 import com.example.lugariesdemaipu.R
 
 @Composable
-fun DetailScreen(viewModel: DetailViewModel = viewModel(), lugarId: Int) {
-    viewModel.getLugar(lugarId.toString())
+fun DetailScreen(viewModel: DetailViewModel = viewModel(), lugarId: String) {
+    viewModel.getLugar(lugarId)
     val uiState by viewModel.uiState.collectAsState()
 
     DetailContent(lugar = uiState.lugar)
