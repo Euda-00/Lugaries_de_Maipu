@@ -107,7 +107,7 @@ fun HomeScreen(
         items(localesDestacados) { lugar ->
             LugarItem(
                 lugar = lugar,
-                onItemClick = { navController.navigate("detalle/${lugar.id}") },
+                onItemClick = { navController.navigate("detail/${lugar.id.toString()}") },
                 modifier = Modifier.padding(5.dp)
             )
         }

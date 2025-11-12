@@ -42,9 +42,9 @@ fun AppNavigation() {
         }
         composable(
             route = "detail/{lugarId}",
-            arguments = listOf(navArgument("lugarId") { type = NavType.IntType })
+            arguments = listOf(navArgument("lugarId") { type = NavType.StringType })
         ) { backStackEntry ->
-            val lugarId = backStackEntry.arguments?.getInt("lugarId")
+            val lugarId = backStackEntry.arguments?.getString("lugarId")
             requireNotNull(lugarId) { "lugarId parameter wasn't found. Please make sure it's set!" }
             DetailScreen(lugarId = lugarId)
         }
