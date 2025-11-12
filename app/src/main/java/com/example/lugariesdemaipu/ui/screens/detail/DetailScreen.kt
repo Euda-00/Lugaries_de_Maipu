@@ -1,5 +1,4 @@
-
-package com.example.lugariesdemaipu
+package com.example.lugariesdemaipu.ui.screens.detail
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -19,6 +18,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.lugariesdemaipu.ui.screens.detail.DetailViewModel
+import com.example.lugariesdemaipu.Lugar
+import com.example.lugariesdemaipu.R
 
 @Composable
 fun DetailScreen(viewModel: DetailViewModel = viewModel(), lugarId: Int) {

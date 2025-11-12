@@ -1,8 +1,9 @@
-
-package com.example.lugariesdemaipu
+package com.example.lugariesdemaipu.ui.screens.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.lugariesdemaipu.data.model.DetailState
+import com.example.lugariesdemaipu.LugarRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
