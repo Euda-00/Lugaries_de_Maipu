@@ -36,14 +36,21 @@ fun HomeScreen(
     ) {
         // Título
         item {
-            Text(
-                text = "LOS LUGARES DE MAIPÚ",
-                style = MaterialTheme.typography.headlineLarge,
-                textAlign = TextAlign.Center,
+            Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(16.dp)
-            )
+                    .padding(top = 24.dp, bottom = 16.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.logo_maipu),
+                    contentDescription = "Logo Lugares de Maipú",
+                    modifier = Modifier
+                        .height(60.dp)
+                        .fillMaxWidth(),
+                    contentScale = ContentScale.Fit
+                )
+            }
         }
 
         // Imagen grande
