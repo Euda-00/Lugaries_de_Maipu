@@ -7,12 +7,12 @@ import com.example.lugariesdemaipu.R
 
 object DatosMaipu {
     val listaCategorias: List<Categoria> = listOf(
-        Categoria(nombre = "Sports", icono = R.drawable.ic_sports),
-        Categoria(nombre = "Food", icono = R.drawable.ic_food),
-        Categoria(nombre = "Events", icono = R.drawable.ic_events),
-        Categoria(nombre = "Commerce", icono = R.drawable.ic_commerce),
-        Categoria(nombre = "Culture", icono = R.drawable.ic_culture),
-        Categoria(nombre = "Entertainment", icono = R.drawable.ic_entertainment)
+        Categoria(nombre = "Deporte", icono = R.drawable.ic_sports),
+        Categoria(nombre = "Comida", icono = R.drawable.ic_food),
+        Categoria(nombre = "Ferias", icono = R.drawable.ic_events),
+        Categoria(nombre = "Comercio", icono = R.drawable.ic_commerce),
+        Categoria(nombre = "Cultura", icono = R.drawable.ic_culture),
+        Categoria(nombre = "Entretenimiento", icono = R.drawable.ic_entertainment)
     )
 
     // Este es tu "array" principal de locales
