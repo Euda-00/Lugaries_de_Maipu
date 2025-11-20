@@ -1097,7 +1097,7 @@ object DatosMaipu {
             direccion = "Bailén 2223, 9251451 Maipú, Región Metropolitana",
             horario = "Lunes a sábado 9 AM - 9PM",
             descripcion = "Centro deportivo, con muro de escalar",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.monos_climbing,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1109,7 +1109,7 @@ object DatosMaipu {
             direccion = "Av. 5 de Abril 33, Local 34-8. 3er Piso, Maipú",
             horario = "Lunes a domingo 10 AM-6 PM",
             descripcion = "Centro de juegos con realidad y arriendo de PC Gamers",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.nitro_xr,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1121,7 +1121,7 @@ object DatosMaipu {
             direccion = "Primera Transversal 2884, Maipú, Región Metropolitana",
             horario = "Lunes a sábado 10:30 am a 1:30 p.m., 4:30 a 11 p.m.",
             descripcion = "Salon de Pool",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.pool_jumoje,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1133,7 +1133,7 @@ object DatosMaipu {
             direccion = "San Juan de Chena 7, 9281442 Maipú, Región Metropolitana",
             horario = "Lunes a domingo 12 a 8 p.m.",
             descripcion = "Juegos electrónicos, juegos mecánicos, camas saltarinas, kinder parks y salas de cumpleaños",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.family_park,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1145,7 +1145,7 @@ object DatosMaipu {
             direccion = "Cmo. a Melipilla 15900, Maipú, Región Metropolitana",
             horario = "Lunes a domingo 10 a 7 p.m.",
             descripcion = "Pista de karting",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.rally_kart,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1159,7 +1159,7 @@ object DatosMaipu {
             direccion = "El Carmen 1750, Maipú, Región Metropolitana",
             horario = "Lunes a domingo de 9:00 a 20:00 hrs.",
             descripcion = "Un monumento histórico y religioso que conmemora la Batalla de Maipú...",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.santuario_acional_de_maipu,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1171,7 +1171,7 @@ object DatosMaipu {
             direccion = "Avenida Los Pajaritos # 2045",
             horario = "Lunes a jueves de 9:00 a 17:30 hrs. Viernes, de 9:00 a 16:00 hrs.",
             descripcion = "Teatro municipal, cuenta con variada cartelera mensual rotativa",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.teatro_municipal_de_maipu,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1183,7 +1183,7 @@ object DatosMaipu {
             direccion = "Camino a Rinconada N° 2000",
             horario = "Lunes a jueves de 9:00 a 17:30 hrs. Viernes, de 9:00 a 16:00 hrs.",
             descripcion = "Casa cultural con diferentes actividades y eventos temporales",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.casa_de_la_cultura,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1195,7 +1195,7 @@ object DatosMaipu {
             direccion = "Avenida Los Pajaritos #2045",
             horario = "jueves a las 19:00 horas y sábado a las 16:00 y 19:00 horas",
             descripcion = "Sala de cine pública, cuenta con diferentes proyecciones y cartelera mensual",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.microcine_sala_k_maipu,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1207,7 +1207,7 @@ object DatosMaipu {
             direccion = "El Carmen 1750, Maipú, Región Metropolitana",
             horario = "De martes a domingo Mañana: 10:00, 11:00 y 12:00 hrs Tarde: 15:00, 16:00 y 17:00 hrs",
             descripcion = "Mirador panorámico en la cúpula del Templo de Maipú",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.mirador_del_santuario_nacional_de_maipu,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1219,7 +1219,7 @@ object DatosMaipu {
             direccion = "Cam. A Rinconada 700, Maipú, Región Metropolitana",
             horario = "Martes a sábado Ingreso: 10:00 a 14:00 h y 15:00 a 18:00 h",
             descripcion = "Museo conmemorativo de la batalla de Maipú y su contexto social, religioso-militar",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.museo_del_carmen_de_maipu,
             latitud = 0.0,
             longitud = 0.0
         ),
@@ -1231,7 +1231,7 @@ object DatosMaipu {
             direccion = "Alberto Llona 1921, Maipú, Región Metropolitana",
             horario = "lunes a viernes 8:30 am a 2 pm, 3-5:30 p.m. sábado, 10 a.m.-2 p.m.",
             descripcion = "Préstamos de libros y diversas actividades culturales",
-            imagen = R.drawable.templo_maipu,
+            imagen = R.drawable.biblioteca_municipal_de_maipu,
             latitud = 0.0,
             longitud = 0.0
         )
